@@ -4,54 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Search Page</title>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.1/dist/full.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website Title</title>
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="A brief description of your webpage, optimized for search engines.">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="A brief description of your webpage, optimized for social media." />
+    <meta property="og:image" content="URL_to_your_image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Website Title" />
+    <meta name="twitter:description" content="A brief description of your webpage, optimized for Twitter." />
+    <meta name="twitter:image" content="URL_to_your_image.jpg" />
+
+    <!-- Link to your CSS file -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="flex flex-col items-center justify-between h-screen bg-gray-100">
+<body class="bg-base-200">
 
-    <header>
-        <!-- Optional Header Content -->
+    <header class="bg-base-100 p-4 shadow-md">
+        <h1 class="text-3xl font-bold text-center">DaisyUI Component Style Guide</h1>
     </header>
 
-    <main class="flex-grow flex flex-col items-center justify-center">
-        <!-- Logo Section -->
-        <div class="mb-8">
-            <img src="https://via.placeholder.com/270x100?text=My+Logo" alt="Logo" class="w-[270px]">
-        </div>
+    <main class="container mx-auto mt-8">
 
-        <!-- Search Bar -->
-        <div class="mb-4">
-            <input type="text" placeholder="Search" class="input input-bordered w-full max-w-xl" />
-        </div>
+        <!-- Buttons Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Buttons</h2>
+            <div class="space-y-4">
+                <button class="btn">Default Button</button>
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-accent">Accent Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+                <button class="btn btn-link">Link Button</button>
+            </div>
+        </section>
 
-        <!-- Search Buttons -->
-        <div class="space-x-4">
-            <button class="btn btn-primary">Search</button>
-            <button class="btn">I'm Feeling Lucky</button>
-        </div>
+        <!-- Alerts Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Alerts</h2>
+            <div class="space-y-4">
+                <div class="alert alert-info">This is an info alert!</div>
+                <div class="alert alert-success">This is a success alert!</div>
+                <div class="alert alert-warning">This is a warning alert!</div>
+                <div class="alert alert-error">This is an error alert!</div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Forms</h2>
+            <div class="space-y-4">
+                <input type="text" placeholder="Text Input" class="input input-bordered w-full max-w-xs" />
+                <input type="email" placeholder="Email Input" class="input input-bordered w-full max-w-xs" />
+                <input type="password" placeholder="Password Input" class="input input-bordered w-full max-w-xs" />
+                <textarea placeholder="Textarea" class="textarea textarea-bordered w-full max-w-xs"></textarea>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option disabled selected>Pick one</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Cards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card w-full bg-base-100 shadow-lg">
+                    <figure><img src="https://via.placeholder.com/300" alt="Image" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Action</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-lg">
+                    <figure><img src="https://via.placeholder.com/300" alt="Image" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p>Dogs are awesome!</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Action</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-lg">
+                    <figure><img src="https://via.placeholder.com/300" alt="Image" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p>This is another card description!</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Action</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Pagination</h2>
+            <div class="btn-group">
+                <button class="btn btn-active">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-base-100 p-4 mt-10">
+            <div class="text-center">
+                <p>&copy; 2024 DaisyUI Style Guide. All rights reserved.</p>
+            </div>
+        </footer>
     </main>
-
-    <!-- Footer Section -->
-    <footer class="w-full bg-gray-200 py-4">
-        <div class="container mx-auto flex justify-between">
-            <div class="flex space-x-4">
-                <a href="#" class="link link-hover">About</a>
-                <a href="#" class="link link-hover">Advertising</a>
-                <a href="#" class="link link-hover">Business</a>
-                <a href="#" class="link link-hover">How Search Works</a>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="link link-hover">Privacy</a>
-                <a href="#" class="link link-hover">Terms</a>
-                <a href="#" class="link link-hover">Settings</a>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
